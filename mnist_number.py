@@ -2,7 +2,6 @@
 
 # import tensorflow as tf
 # mnist = tf.keras.datasets.mnist
-
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
@@ -48,11 +47,6 @@ def display_mult_flat(start, stop):
     plt.savefig('static/display_mult_flat.png')
 
 
-
-# initialize variables
-#sess.run(y, feed_dict={x: x_train})
-
-
 # this will be called publicly 
 def run_with_variables(train_set_size, learning_rate, train_steps, batch_test_set_size):
     # setting variables
@@ -68,6 +62,8 @@ def run_with_variables(train_set_size, learning_rate, train_steps, batch_test_se
     W = tf.Variable(tf.zeros([784, 10]))
     b = tf.Variable(tf.zeros([10]))
     y = tf.nn.softmax(tf.matmul(x, W) + b)
+    
+    # initialize variables
     init = tf.global_variables_initializer()
     sess.run(init)
 

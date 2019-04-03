@@ -12,16 +12,28 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
         crossorigin="anonymous"></script>
+    <style>
+        li { 
+            font-size: 1.5em;
+        }
+        img {
+            width: 400px;
+        }
+    </style> 
 </head>
 <body>
 <div class="container">
-    <h1> Coalee's enjoyable list of some exercise projects. </h1>
+    <h1> Coalee's enjoyable list of some ML exercise projects. </h1>
     <ol>
         <li>
-            <a href="ml">Basic, very basic Machine Learning exercise</a>
+            <a href="mnist_number">Number MNIST Exercise: very basic Machine Learning exercise</a>
+            <img src="{{url_for('static', filename='weights.png')}}"/>
+        </li>
+        <li>
+            <a href="mnist_fashion">Fashion MNIST Exercise: a tutorial from tensorflow official site</a>
+            <img src="{{url_for('static', filename='fashion_example.png')}}"/>
         </li>
     </ol>
 </div>
-<img src="{{url_for('static', filename='weights.png')}}"/>
 </body>
 </html>
